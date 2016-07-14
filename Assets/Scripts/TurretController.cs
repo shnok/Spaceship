@@ -9,7 +9,7 @@ public class TurretController : MonoBehaviour {
 
 	private Animator animator;
 	public GameObject bullet;
-	private Camera turretCamera;
+	public Camera turretCamera;
 	public TurretType turretID;
 	public List<Transform> turretElements;
 	private Vector3 direction;
@@ -25,7 +25,8 @@ public class TurretController : MonoBehaviour {
 	void Start()
 	{
 		animator = GetComponent<Animator> ();
-		turretCamera = GameObject.Find ("TurretCamera").GetComponent<Camera> ();
+		//turretCamera = GameManager.turretCamera.GetComponent<Camera> ();
+		//turretCamera = GameObject.Find ("TurretCamera").GetComponent<Camera> ();
 	}
 
 	void Update ()
